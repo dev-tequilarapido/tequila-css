@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisGibe/teq-css.git"
+    "url": "git+https://github.com/dev-tequilarapido/tequila-css.git"
   },
   "author": "GIBELLI Christophe",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ChrisGibe/teq-css/issues"
+    "url": "https://github.com/dev-tequilarapido/tequila-css/issues"
   },
-  "homepage": "https://github.com/ChrisGibe/teq-css#readme",
+  "homepage": "https://github.com/ev-tequilarapido/tequila-css#readme",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^8.31.0",
