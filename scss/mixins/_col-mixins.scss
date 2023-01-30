@@ -1,0 +1,14 @@
+@mixin col-breakpoints($i) {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .col-#{$key}-#{$i} {
+                flex: 0 0 (8.33333333% * $i);
+                max-width: (8.33333333% * $i);
+                padding: $col-padding;
+            }
+            .offset-#{$key}-#{$i} {
+                margin-left: (8.33333333% * $i);
+            }
+        }
+    }
+}

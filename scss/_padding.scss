@@ -1,0 +1,50 @@
+$padding : (
+  'top' : 't',
+  'bottom' : 'b',
+  'left': 'l',
+  'right': 'r',
+);
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-0 {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+@each $words, $abbr in $padding {
+  @for $i from 1 through 12 {
+    .p#{$abbr}-#{$i}, div[class^=col-].p#{$abbr}-#{$i} {
+      padding-#{$words}: calc(#{$margin} * #{$i});
+    }
+  }
+}
+
+@each $words, $abbr in $padding {
+  @for $i from 0 through 12 {
+    @include padding-breakpoints($words, $abbr, $i);
+  }
+}
+
+@include px-0-breakpoints();
+@include py-0-breakpoints();
+

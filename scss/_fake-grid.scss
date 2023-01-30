@@ -1,0 +1,44 @@
+#grid {
+  display: none;
+  height: 100%;
+  left: 50%;
+  margin: 0 auto;
+  padding: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 100%;
+
+  &.isVisible {
+    display: flex;
+  }
+
+  @include teq-breakpoint($large) {
+    max-width: $max-w;
+    padding: $max-w-padding-lg;
+  }
+
+  >div {
+    background-color: rgba(122, 55, 156, 0.1);
+    height: 100%;
+    padding: 0 #{calc($gutter / 2)};
+    width: calc(100% / 3);
+
+
+    @include teq-breakpoint(0, $large) {
+      &:nth-child(n+5) {
+        display: none;
+      }
+    }
+
+    @include teq-breakpoint($large) {
+      width: calc(100% / 12);
+    }
+
+    >div {
+      background-color: rgba(122, 55, 156, 0.1);
+      height: 100%;
+    }
+  }
+}

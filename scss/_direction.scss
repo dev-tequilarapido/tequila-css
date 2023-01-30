@@ -1,0 +1,61 @@
+@mixin direction-column-breakpoints() {
+  @each $key,$val  in $breaks {
+    @include teq-breakpoint($val) {
+      .column-#{$key} {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@mixin direction-row-breakpoints() {
+  @each $key,$val  in $breaks {
+    @include teq-breakpoint($val) {
+      .row-#{$key} {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@mixin direction-column-reverse-breakpoints() {
+  @each $key,$val  in $breaks {
+    @include teq-breakpoint($val) {
+      .column-r-#{$key} {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+@mixin direction-row-reverse-breakpoints() {
+  @each $key,$val  in $breaks {
+    @include teq-breakpoint($val) {
+      .row-r-#{$key} {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column-r {
+  flex-direction: column-reverse;
+}
+
+@include direction-column-breakpoints();
+@include direction-column-reverse-breakpoints();
+
+.row {
+  flex-direction: row;
+}
+
+.row-r {
+  flex-direction: row-reverse;
+}
+
+@include direction-row-breakpoints();
+@include direction-row-reverse-breakpoints();

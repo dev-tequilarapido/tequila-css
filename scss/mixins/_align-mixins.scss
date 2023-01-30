@@ -1,0 +1,9 @@
+@mixin align-breakpoints($a, $k) {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .align-#{$key}-#{$a} {
+                align-items: $k;
+            }
+        }
+    }
+}

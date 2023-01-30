@@ -1,0 +1,71 @@
+@use "sass:map";
+
+// PREFIX
+$color-prefix: 'c-';
+$btn-prefix: (
+  btn-primary-name: primary,
+  btn-secondary-name: secondary,
+  btn-tertiary-name: tertiary,
+);
+
+// BREAKPOINTS
+$big-screen : 1600px;
+$screen : 1440px;
+$small-screen: 1300px;
+$x-small-screen: 1200px;
+$tablet: 1024px;
+$m-tablet: 1080px;
+$large : 991px;
+$medium : 768px;
+$small: 690px;
+$x-small: 480px;
+$xx-small: 350px;
+
+$breaks : (
+  'sm' : $small,
+  'md' : $medium,
+  'lg': $large,
+  'tab': $tablet,
+  'xl': $small-screen
+);
+
+// COL AND ROW MARGIN
+$margin: 10px;
+$max-w: 1600px;
+$max-w-sm: 900px;
+$gutter: $margin*3;
+$margin-container: $margin*10;
+
+// COLORS
+$colors: (
+  #{$color-prefix}white: #fff,
+  #{$color-prefix}black: #0b0b0b,
+);
+
+// BUTTONS
+$font-size: 18px;
+$font-weight: 700;
+
+:root {
+  // Primary BUTTON
+  --#{map-get($btn-prefix, btn-primary-name)}-color: #fff;
+  --#{map-get($btn-prefix, btn-primary-name)}-color-state: #0b0b0b;
+  --#{map-get($btn-prefix, btn-primary-name)}-bg-color: #0b0b0b;
+  --#{map-get($btn-prefix, btn-primary-name)}-bg-color-state: #fff;
+  --#{map-get($btn-prefix, btn-primary-name)}-border-color: #0b0b0b;
+  --#{map-get($btn-prefix, btn-primary-name)}-border-color-state: #0b0b0b;
+  // Secondary BUTTON
+  --#{map-get($btn-prefix, btn-secondary-name)}-color: #0b0b0b;
+  --#{map-get($btn-prefix, btn-secondary-name)}-color-state: #fff;
+  --#{map-get($btn-prefix, btn-secondary-name)}-bg-color: #fff;
+  --#{map-get($btn-prefix, btn-secondary-name)}-bg-color-state: #0b0b0b;
+  --#{map-get($btn-prefix, btn-secondary-name)}-border-color: #0b0b0b;
+  --#{map-get($btn-prefix, btn-secondary-name)}-border-color-state: #0b0b0b;
+  // Tertiary BUTTON
+  --#{map-get($btn-prefix, btn-tertiary-name)}-color: #fff;
+  --#{map-get($btn-prefix, btn-tertiary-name)}-color-state: #04a5e3;
+  --#{map-get($btn-prefix, btn-tertiary-name)}-bg-color: #04a5e3;
+  --#{map-get($btn-prefix, btn-tertiary-name)}-bg-color-state: #fff;
+  --#{map-get($btn-prefix, btn-tertiary-name)}-border-color: #fff;
+  --#{map-get($btn-prefix, btn-tertiary-name)}-border-color-state: #04a5e3;
+}

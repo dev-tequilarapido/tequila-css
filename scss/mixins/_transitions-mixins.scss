@@ -1,0 +1,7 @@
+@mixin transition($type:all,$time:0.36s,$ease:cubic-bezier(0.25, 1, 0.5, 1)) {
+  -webkit-transition: $type $time $ease;
+  -moz-transition: $type $time $ease;
+  -ms-transition: $type $time $ease;
+  -o-transition: $type $time $ease;
+  transition: $type $time $ease;
+}

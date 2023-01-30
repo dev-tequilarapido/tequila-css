@@ -1,0 +1,9 @@
+@mixin justify-breakpoints($name, $value) {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .justify-#{$name}-#{$key} {
+                justify-content: $value;
+            }
+        }
+    }
+}

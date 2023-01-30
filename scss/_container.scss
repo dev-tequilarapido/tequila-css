@@ -1,0 +1,21 @@
+.teq-container {
+  display: block;
+  margin: $teq-container-margin;
+  padding: 0 $padding-container-mobile;
+  width: 100%;
+
+  @include teq-breakpoint($large) {
+    margin: $teq-container-margin-lg;
+    padding: 0 $padding-container;
+  }
+
+  &.bg {
+    padding-bottom: $teq-container-margin-bg;
+    padding-top: $teq-container-margin-bg;
+
+    @include teq-breakpoint($large) {
+      padding-bottom: $teq-container-margin-bg-lg;
+      padding-top: $teq-container-margin-bg-lg;
+    }
+  }
+}

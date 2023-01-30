@@ -1,0 +1,38 @@
+@use '../_setup/_my-setup' as btn_;
+@use './transitions-mixins' as transition-mixin_;
+
+@mixin btn-hover-and-active($btn-type) {
+  &:hover,
+  &:focus-visible {
+    background-color: var(--#{$btn-type}-bg-color-state);
+    box-shadow: inset 0 0 1px 1px var(--#{$btn-type}-border-color-state);
+    color: var(--#{$btn-type}-color-state);
+  }
+}
+
+@mixin btn-type-styles($btn-type) {
+  background-color: var(--#{$btn-type}-bg-color);
+  border-radius: 37px;
+  box-shadow: inset 0 0 1px 1px var(--#{$btn-type}-border-color);
+  color: var(--#{$btn-type}-color);
+  padding: 16px 32px;
+
+  @include btn-hover-and-active($btn-type);
+}
+
+
+@mixin btn($btn-type) {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-family: "";
+  font-size: btn_.$font-size;
+  font-weight: btn_.$font-weight;
+  justify-content: center;
+  letter-spacing: 0.2px;
+  outline: none;
+  width: fit-content;
+
+  @include btn-type-styles($btn-type);
+  @include transition-mixin_.transition();
+}

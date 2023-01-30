@@ -1,0 +1,32 @@
+@mixin margin-breakpoints($words, $abbr, $i) {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .m#{$abbr}-#{$key}-#{$i},
+            div[class^="col-"].m#{$abbr}-#{$key}-#{$i} {
+                margin-#{$words}: calc(#{$margin} * #{$i});
+            }
+        }
+    }
+}
+
+@mixin mx-0-breakpoints() {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .mx-#{$key}-0 {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+@mixin my-0-breakpoints() {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .my-#{$key}-0 {
+                margin-bottom: 0;
+                margin-top: 0;
+            }
+        }
+    }
+}

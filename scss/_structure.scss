@@ -1,0 +1,31 @@
+// 1 - TEQ-CONTAINER
+
+/* Margin whithout color background */
+$teq-container-margin: #{$margin*3} auto;
+$teq-container-margin-lg: #{$margin*8} auto;
+
+/* Margin whith color background */
+$teq-container-margin-bg: #{$margin*4};
+$teq-container-margin-bg-lg: #{$margin*8};
+
+/* Padding Teq-container */
+$padding-container: $gutter;
+$padding-container-mobile: #{calc($gutter / 2)};
+
+// 2 - MAX-W
+
+$max-w-padding: 0 20px;
+$max-w-padding-lg: 0 $margin-container - $gutter;
+
+// 3 - TEQ-ROW
+
+/* Row */
+$teq-row-gutter: -#{$padding-container};
+$teq-row-gutter-mobile: -#{$padding-container-mobile};
+
+/* Row inside a col */
+$teq-row-gutter-for-col: -#{calc($gutter / 2)};
+
+// 4 - COL
+
+$col-padding: 0 15px;

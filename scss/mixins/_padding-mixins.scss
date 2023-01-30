@@ -1,0 +1,32 @@
+@mixin padding-breakpoints($words, $abbr, $i) {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .p#{$abbr}-#{$key}-#{$i},
+            div[class^="col-"].p#{$abbr}-#{$key}-#{$i} {
+                padding-#{$words}: calc(#{$margin} * #{$i});
+            }
+        }
+    }
+}
+
+@mixin px-0-breakpoints() {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($max-width: $val) {
+            .px-#{$key}-0 {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@mixin py-0-breakpoints() {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($max-width: $val) {
+            .py-#{$key}-0 {
+                padding-bottom: 0;
+                padding-top: 0;
+            }
+        }
+    }
+}

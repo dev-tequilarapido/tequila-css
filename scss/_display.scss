@@ -1,0 +1,33 @@
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-small-wrap {
+  @include teq-breakpoint(0, $large) {
+    flex-wrap: wrap;
+  }
+}
+
+.desktop-only {
+  display: none !important;
+
+  @include teq-breakpoint($large) {
+    display: flex !important;
+  }
+}
+
+.mobile-only {
+  display: flex !important;
+
+  @include teq-breakpoint($large) {
+    display: none !important;
+  }
+}

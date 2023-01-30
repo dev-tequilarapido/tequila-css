@@ -1,0 +1,24 @@
+// COLORS CLASS
+@each $name, $color in $colors {
+    .#{$name} {
+        color: $color;
+    }
+}
+
+// BACKGROUND COLORS CLASS
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background: $color;
+    }
+}
+
+// FILL COLOR FOR SVG
+@each $name, $color in $colors {
+    .fill-#{$name} {
+        fill: $color;
+
+        path {
+            fill: $color;
+        }
+    }
+}

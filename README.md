@@ -1,2 +1,1 @@
-# tequila-css
-Test
+# Teq CSS

@@ -1,0 +1,10 @@
+@mixin max-w {
+    margin: 0 auto;
+    padding: $max-w-padding;
+    width: auto;
+
+    @include teq-breakpoint($large) {
+        max-width: $max-w;
+        padding: $max-w-padding-lg;
+    }
+}

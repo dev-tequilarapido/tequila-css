@@ -1,0 +1,25 @@
+{
+  "name": "tequila-css",
+  "version": "1.0.4",
+  "description": "A custom CSS library",
+  "main": "./js/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "webpack --config ./bundler/webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisGibe/teq-css.git"
+  },
+  "author": "GIBELLI Christophe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisGibe/teq-css/issues"
+  },
+  "homepage": "https://github.com/ChrisGibe/teq-css#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.31.0",
+    "sass": "^1.57.1"
+  }
+}

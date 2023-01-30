@@ -1,0 +1,35 @@
+/* stylelint-disable */
+.teq-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc($teq-row-gutter-mobile / 2);
+  margin-left: calc($teq-row-gutter-mobile / 2);
+
+  @include teq-breakpoint($large) {
+    margin-right: calc($teq-row-gutter / 2);
+    margin-left: calc($teq-row-gutter/ 2);
+  }
+
+  .teq-container > & {
+    margin-right: $teq-row-gutter-mobile;
+    margin-left: $teq-row-gutter-mobile;
+
+    @include teq-breakpoint($large) {
+      margin-right: $teq-row-gutter;
+      margin-left: $teq-row-gutter;
+    }
+
+    &.max-w {
+      @include teq-breakpoint($max-w) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include teq-breakpoint(0, $large) {
+       padding: 0;
+      }
+    }
+  }
+}
+
+/* stylelint-enable */

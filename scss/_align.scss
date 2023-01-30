@@ -1,0 +1,24 @@
+$align: (
+  center: center,
+  stretch: stretch,
+  start: flex-start,
+  end: flex-end,
+);
+
+@mixin align-breakpoints($a, $k) {
+  @each $key,$val  in $breaks {
+    @include teq-breakpoint($val) {
+      .align-#{$key}-#{$a} {
+        align-items: $k;
+      }
+    }
+  }
+}
+
+@each $a, $k in $align {
+  .align-#{$a} {
+    align-items: $k;
+  }
+
+  @include align-breakpoints($a, $k);
+}

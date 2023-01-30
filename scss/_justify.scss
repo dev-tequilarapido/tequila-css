@@ -1,0 +1,19 @@
+$justify: (
+  center: center,
+  stretch: stretch,
+  start: start,
+  end: end,
+  between: space-between,
+  around: space-around,
+  evenly: space-evenly,
+);
+
+@each $name, $value in $justify {
+  .justify-#{$name} {
+    justify-content: $value;
+  }
+}
+
+@each $name, $value in $justify {
+  @include justify-breakpoints($name, $value);
+}
