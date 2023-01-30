@@ -1,6 +1,6 @@
 {
   "name": "tequila-css",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A custom CSS library",
   "main": "./js/index.js",
   "type": "module",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/dev-tequilarapido/tequila-css/issues"
   },
-  "homepage": "https://github.com/ev-tequilarapido/tequila-css#readme",
+  "homepage": "https://github.com/dev-tequilarapido/tequila-css#readme",
   "dependencies": {},
   "devDependencies": {
     "eslint": "^8.31.0",
