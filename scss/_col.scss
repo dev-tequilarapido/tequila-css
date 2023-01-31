@@ -11,6 +11,9 @@
     padding: $col-padding;
     width: (8.33333333% * $i);
   }
+}
+
+@for $i from 1 through 12 {
   .offset-#{$i} {
     margin-left: (8.33333333% * $i);
   }
@@ -19,3 +22,5 @@
 @for $i from 1 through 12 {
   @include col-breakpoints($i);
 }
+
+@include offset-breakpoints();

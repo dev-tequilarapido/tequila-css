@@ -6,8 +6,17 @@
                 max-width: (8.33333333% * $i);
                 padding: $col-padding;
             }
-            .offset-#{$key}-#{$i} {
-                margin-left: (8.33333333% * $i);
+        }
+    }
+}
+
+@mixin offset-breakpoints() {
+    @each $key, $val in $breaks {
+        @for $i from 1 through 12 {
+            @include teq-breakpoint($val) {
+                .offset-#{$key}-#{$i} {
+                    margin-left: (8.33333333% * $i);
+                }
             }
         }
     }
