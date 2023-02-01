@@ -1,10 +1,12 @@
-@mixin col-breakpoints($i) {
+@mixin col-breakpoints() {
     @each $key, $val in $breaks {
-        @include teq-breakpoint($val) {
-            .col-#{$key}-#{$i} {
-                flex: 0 0 (8.33333333% * $i);
-                max-width: (8.33333333% * $i);
-                padding: $col-padding;
+        @for $i from 1 through 12 {
+            @include teq-breakpoint($val) {
+                .col-#{$key}-#{$i} {
+                    flex: 0 0 (8.33333333% * $i);
+                    max-width: (8.33333333% * $i);
+                    padding: $col-padding;
+                }
             }
         }
     }

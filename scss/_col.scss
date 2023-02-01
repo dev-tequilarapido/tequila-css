@@ -19,8 +19,6 @@
   }
 }
 
-@for $i from 1 through 12 {
-  @include col-breakpoints($i);
-}
 
+@include col-breakpoints();
 @include offset-breakpoints();
