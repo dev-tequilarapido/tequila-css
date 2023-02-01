@@ -11,7 +11,7 @@ $align: (
 }
 
 @each $a, $k in $align {
-  @include align-breakpoints($a, $k);
+  @include text-breakpoints($a, $k);
 }
 
 .text-uppercase {

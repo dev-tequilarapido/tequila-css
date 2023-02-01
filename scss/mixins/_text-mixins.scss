@@ -1,4 +1,4 @@
-@mixin align-breakpoints($a, $k) {
+@mixin text-breakpoints($a, $k) {
     @each $key,$val  in $breaks {
       @include teq-breakpoint($val) {
         .text-#{$key}-#{$a} {
