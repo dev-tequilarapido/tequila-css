@@ -4,20 +4,13 @@ $align: (
         right: right,
 );
 
-@mixin align-breakpoints($a, $k) {
-  @each $key,$val  in $breaks {
-    @include teq-breakpoint($val) {
-      .text-#{$key}-#{$a} {
-        align-items: $k;
-      }
-    }
-  }
-}
-
 @each $a, $k in $align {
   .text-#{$a} {
     text-align: $k;
   }
+}
 
+@each $a, $k in $align {
   @include align-breakpoints($a, $k);
 }
+

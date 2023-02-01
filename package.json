@@ -1,6 +1,6 @@
 {
   "name": "tequila-css",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "A custom CSS library",
   "main": "./js/index.js",
   "type": "module",
