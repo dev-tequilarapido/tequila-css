@@ -10,8 +10,10 @@
 @import "./mixins/transitions-mixins";
 
 
+@import "./global";
 @import "./structure";
 @import "./align";
+@import "./text";
 @import "./_button";
 @import "./display";
 @import "./container";
@@ -28,5 +30,5 @@
 @import "./width";
 @import "./height";
 @import "./color";
-
+@import "./img";
 

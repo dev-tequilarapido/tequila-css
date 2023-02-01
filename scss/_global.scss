@@ -1,0 +1,57 @@
+@use "sass:map";
+$header-height : var(--headerHeight);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: #{$header-height};
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: none;
+  width: 100%;
+}
+
+
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  >div{
+    &:first-child{
+      margin-top:#{$header-height};
+    }
+  }
+}
+
+img{
+  display: block;
+  width: 100%;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+
+p,
+a,
+li,
+h1,
+h2,
+h3,
+h4 {
+  // Help prevent overflow of long words/names/URLs
+  overflow-wrap: break-word;
+  text-decoration-skip-ink: auto;
+}
