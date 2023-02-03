@@ -31,6 +31,14 @@ $margins : (
   margin-right: 0;
 }
 
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
 @each $words, $abbr in $margins {
   @for $i from 1 through 24 {
     .m#{$abbr}-#{$i}, div[class^=col-].m#{$abbr}-#{$i} {
