@@ -22,11 +22,12 @@ $x-small: 480px;
 $xx-small: 350px;
 
 $breaks : (
-  'sm' : $small,
-  'md' : $medium,
-  'lg': $large,
-  'tab': $tablet,
-  'xl': $small-screen
+        'xs': $x-small,
+        'sm' : $small,
+        'md' : $medium,
+        'lg': $large,
+        'tab': $tablet,
+        'xl': $small-screen
 );
 
 // COL AND ROW MARGIN
