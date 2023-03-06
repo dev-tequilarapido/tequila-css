@@ -23,3 +23,15 @@
         }
     }
 }
+
+@mixin afterset-breakpoints() {
+    @each $key, $val in $breaks {
+        @for $i from 1 through 12 {
+            @include teq-breakpoint($val) {
+                .afterset-#{$key}-#{$i} {
+                    margin-right: (8.33333333% * $i);
+                }
+            }
+        }
+    }
+}
