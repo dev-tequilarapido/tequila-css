@@ -17,8 +17,13 @@
   .offset-#{$i} {
     margin-left: (8.33333333% * $i);
   }
+  .afterset-#{$i} {
+    margin-right: (8.33333333% * $i);
+  }
 }
+
 
 
 @include col-breakpoints();
 @include offset-breakpoints();
+@include afterset-breakpoints();
