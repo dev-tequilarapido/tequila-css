@@ -5,48 +5,6 @@ $margins : (
   'right': 'r',
 );
 
-.mx-0 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.my-0 {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.mt-0 {
-  margin-top: 0;
-}
-
-.mb-0 {
-  margin-bottom: 0;
-}
-
-.ml-0 {
-  margin-left: 0;
-}
-
-.mr-0 {
-  margin-right: 0;
-}
-
-.mb-auto {
-  margin-bottom: auto;
-}
-
-.mt-auto {
-  margin-top: auto;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.mr-auto {
-  margin-right: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -57,19 +15,40 @@ $margins : (
   margin-top: auto;
 }
 
+// margin : margin-left: 10px;
 @each $words, $abbr in $margins {
-  @for $i from 1 through 24 {
+  @for $i from 0 through 24 {
     .m#{$abbr}-#{$i}, div[class^=col-].m#{$abbr}-#{$i} {
       margin-#{$words}: calc(#{$margin} * #{$i});
     }
   }
 }
 
+// margin breakpoints
 @each $words, $abbr in $margins {
   @for $i from 0 through 24 {
     @include margin-breakpoints($words, $abbr, $i);
   }
 }
 
-@include mx-0-breakpoints();
-@include my-0-breakpoints();
+// each margin direction auto. ex: margin-top: auto;
+@each $words, $abbr in margins {
+  @include margin-auto($words, $abbr)
+}
+
+// margin-left / margin-right
+@include mx();
+
+// margin-top / margin-bottom
+@include my();
+
+// margin-left / margin-right with breakpoints
+@for $i from 0 through 24 {
+  @include mx-breakpoints($i);
+}
+
+// margin-top / margin-bottom with breakpoints
+@for $i from 0 through 24 {
+  @include my-breakpoints($i);
+}
+

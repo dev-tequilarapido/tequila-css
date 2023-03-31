@@ -1,32 +1,55 @@
 @mixin margin-breakpoints($words, $abbr, $i) {
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
-            .m#{$abbr}-#{$key}-#{$i},
-            div[class^="col-"].m#{$abbr}-#{$key}-#{$i} {
+            .m#{$abbr}-#{$key}-#{$i}, div[class^="col-"].m#{$abbr}-#{$key}-#{$i} {
                 margin-#{$words}: calc(#{$margin} * #{$i});
             }
         }
     }
 }
 
-@mixin mx-0-breakpoints() {
+@mixin mx() {
+    @for $i from 0 through 24 {
+        .mx-#{$i}, div[class^=col-].mx-#{$i} {
+            margin-left: calc(#{$margin} * #{$i});
+            margin-right: calc(#{$margin} * #{$i});
+        }
+    }
+}
+
+@mixin mx-breakpoints($i) {
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
-            .mx-#{$key}-0 {
-                margin-left: 0;
-                margin-right: 0;
+            .mx-#{$key}-#{$i} {
+                margin-left: #{$i}px;
+                margin-right: #{$i}px;
             }
         }
     }
 }
 
-@mixin my-0-breakpoints() {
+@mixin my() {
+    @for $i from 0 through 24 {
+        .my-#{$i}, div[class^=col-].my-#{$i} {
+            margin-bottom: calc(#{$margin} * #{$i});
+            margin-top: calc(#{$margin} * #{$i});
+        }
+    }
+}
+
+@mixin my-breakpoints($i) {
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
-            .my-#{$key}-0 {
-                margin-bottom: 0;
-                margin-top: 0;
+            .my-#{$key}-#{$i} {
+                margin-bottom: #{$i}px;
+                margin-top: #{$i}px;
             }
         }
     }
+}
+
+@mixin margin-auto($words, $abbr) {
+  .m#{$abbr}-auto {
+      margin-#{$words}: auto;
+  }
 }

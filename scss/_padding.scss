@@ -5,46 +5,42 @@ $padding : (
   'right': 'r',
 );
 
-.px-0 {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.py-0 {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.pt-0 {
-  padding-top: 0;
-}
-
-.pb-0 {
-  padding-bottom: 0;
-}
-
-.pl-0 {
-  padding-left: 0;
-}
-
-.pr-0 {
-  padding-right: 0;
-}
-
+// padding : padding-left: 10px;
 @each $words, $abbr in $padding {
-  @for $i from 1 through 12 {
+  @for $i from 0 through 24 {
     .p#{$abbr}-#{$i}, div[class^=col-].p#{$abbr}-#{$i} {
       padding-#{$words}: calc(#{$margin} * #{$i});
     }
   }
 }
 
+// padding breakpoints
 @each $words, $abbr in $padding {
-  @for $i from 0 through 12 {
+  @for $i from 0 through 24 {
     @include padding-breakpoints($words, $abbr, $i);
   }
 }
 
-@include px-0-breakpoints();
-@include py-0-breakpoints();
+// padding-left / padding-right
+@include px();
 
+// padding-top / padding-bottom
+@include py();
+
+// padding-left / padding-right with breakpoints
+@for $i from 0 through 24 {
+  @include px-breakpoints($i);
+}
+
+// padding-top / padding-bottom with breakpoints
+@for $i from 0 through 24 {
+  @include py-breakpoints($i);
+}
+
+// padding top/right/bottom/left
+@include pxy();
+
+// padding top/right/bottom/left with breakpoints
+@for $i from 0 through 24 {
+  @include pxy-breakpoints($i);
+}
