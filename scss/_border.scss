@@ -1,0 +1,13 @@
+@for $i from 1 through 24 {
+  .bor-#{$i} {
+    @each $name, $color in $colors {
+        border: #{$i}px solid $color;
+    }
+  }
+}
+
+@for $i from 1 through 24 {
+  .bor-rad-#{$i} {
+    border-radius: #{$i}px;
+  }
+}

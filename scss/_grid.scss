@@ -1,0 +1,19 @@
+@for $i from 1 through 12 {
+  .gtr-#{$i} {
+    grid-template-rows: repeat(#{$i}, 1fr);
+  }
+}
+
+@for $i from 1 through 12 {
+  .gtc-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+}
+
+@for $i from 1 through 12 {
+  @include gtr-breakpoints($i);
+}
+
+@for $i from 1 through 12 {
+  @include gtc-breakpoints($i);
+}

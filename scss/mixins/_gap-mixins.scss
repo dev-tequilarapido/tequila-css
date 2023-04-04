@@ -1,8 +1,28 @@
-@mixin gap-breakpoints($k) {
+@mixin gap-breakpoints($i) {
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
-            .gap-#{$key}-#{$k} {
-                gap: #{$k}px;
+            .gap-#{$key}-#{$i} {
+                gap: #{$i}px;
+            }
+        }
+    }
+}
+
+@mixin gap-col-breakpoints($i) {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .gap-col-#{$key}-#{$i} {
+                column-gap: #{$i}px;
+            }
+        }
+    }
+}
+
+@mixin gap-row-breakpoints($i) {
+    @each $key, $val in $breaks {
+        @include teq-breakpoint($val) {
+            .gap-row-#{$key}-#{$i} {
+                row-gap: #{$i}px;
             }
         }
     }
