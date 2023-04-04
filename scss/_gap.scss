@@ -1,29 +1,29 @@
-@for $i from 0 through 50 {
+@for $i from 0 through 80 {
   .gap-#{$i} {
     gap: #{$i}px;
   }
 }
 
-@for $i from 0 through 50 {
+@for $i from 0 through 80 {
   .gap-col-#{$i} {
     column-gap: #{$i}px;
   }
 }
 
-@for $i from 0 through 50 {
+@for $i from 0 through 80 {
   .gap-row-#{$i} {
     row-gap: #{$i}px;
   }
 }
 
-@for $i from 0 through 50 {
+@for $i from 0 through 80 {
   @include gap-breakpoints($i);
 }
 
-@for $i from 0 through 50 {
+@for $i from 0 through 80 {
   @include gap-col-breakpoints($i);
 }
 
-@for $i from 0 through 50 {
+@for $i from 0 through 80 {
   @include gap-row-breakpoints($i);
 }
