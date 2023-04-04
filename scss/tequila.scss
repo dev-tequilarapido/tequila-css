@@ -3,6 +3,7 @@
 @import "./mixins/btn-mixins";
 @import "./mixins/col-mixins";
 @import "./mixins/gap-mixins";
+@import "./mixins/grid-mixins";
 @import "./mixins/justify-mixins";
 @import "./mixins/margin-mixins";
 @import "./mixins/max-width-mixins";
@@ -14,6 +15,7 @@
 @import "./global";
 @import "./structure";
 @import "./align";
+@import "./border";
 @import "./text";
 @import "./_button";
 @import "./display";
@@ -25,6 +27,7 @@
 @import "./row";
 @import "./justify";
 @import "./gap";
+@import "./grid";
 @import "./margin";
 @import "./padding";
 @import "./fake-grid";
