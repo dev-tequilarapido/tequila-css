@@ -1,7 +1,7 @@
 @for $i from 1 through 24 {
-  .bor-#{$i} {
-    @each $name, $color in $colors {
-        border: #{$i}px solid $color;
+  @each $name, $color in $colors {
+    .bor-#{$i}-#{$colors} {
+      border: #{$i}px solid $color;
     }
   }
 }
