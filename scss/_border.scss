@@ -1,6 +1,6 @@
 @for $i from 1 through 24 {
   @each $name, $color in $colors {
-    .bor-#{$i}-#{$color} {
+    .bor-#{$i}-#{$name} {
       border: #{$i}px solid $color;
     }
   }
