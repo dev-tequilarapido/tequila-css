@@ -41,8 +41,8 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .py-#{$key}-#{$i} {
-                padding-bottom: #{$i}px;
-                padding-top: #{$i}px;
+                padding-bottom: calc(#{$margin} * #{$i});
+                padding-top: calc(#{$margin} * #{$i});
             }
         }
     }
