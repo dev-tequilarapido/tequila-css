@@ -21,8 +21,8 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .px-#{$key}-#{$i} {
-                padding-left: #{$i}px;
-                padding-right: #{$i}px;
+                padding-left: calc(#{$margin} * #{$i});
+                padding-right: calc(#{$margin} * #{$i});
             }
         }
     }
