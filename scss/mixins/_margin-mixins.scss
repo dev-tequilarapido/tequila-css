@@ -41,8 +41,8 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .my-#{$key}-#{$i} {
-                margin-bottom: #{$i}px;
-                margin-top: #{$i}px;
+                margin-bottom: calc(#{$margin} * #{$i});
+                margin-top: calc(#{$margin} * #{$i});
             }
         }
     }
