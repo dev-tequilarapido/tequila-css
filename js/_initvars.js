@@ -12,6 +12,7 @@ function initvars() {
         return;
     }
     let headerHeight = menu.offsetHeight;
+    console.log(headerHeight);
 
     document.documentElement.style.setProperty('--headerHeight', `${headerHeight}px`);
 
