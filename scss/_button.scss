@@ -1,4 +1,4 @@
-@use "./_setup/_my-setup" as btn_;
+//@use "./_setup/_my-setup" as btn_;
 @use "./mixins/_btn-mixins" as btn-mixin_;
 
 @each $prefix, $name in btn_.$btn-prefix {
