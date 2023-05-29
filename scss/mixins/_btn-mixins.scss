@@ -1,4 +1,3 @@
-@use '../_setup/_my-setup' as btn_;
 @use './transitions-mixins' as transition-mixin_;
 
 @mixin btn-hover-and-active($btn-type) {
@@ -26,8 +25,8 @@
   cursor: pointer;
   display: flex;
   font-family: "";
-  font-size: btn_.$font-size;
-  font-weight: btn_.$font-weight;
+  font-size: 18px;
+  font-weight: 700;
   justify-content: center;
   letter-spacing: 0.2px;
   outline: none;
