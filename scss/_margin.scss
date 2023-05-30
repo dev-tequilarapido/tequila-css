@@ -17,7 +17,7 @@ $margins : (
 
 // margin : margin-left: 10px;
 @each $words, $abbr in $margins {
-  @for $i from 0 through 24 {
+  @for $i from 0 through 50 {
     .m#{$abbr}-#{$i}, div[class^=col-].m#{$abbr}-#{$i} {
       margin-#{$words}: calc(#{$margin} * #{$i});
     }
@@ -26,7 +26,7 @@ $margins : (
 
 // margin breakpoints
 @each $words, $abbr in $margins {
-  @for $i from 0 through 24 {
+  @for $i from 0 through 50 {
     @include margin-breakpoints($words, $abbr, $i);
   }
 }
@@ -43,12 +43,12 @@ $margins : (
 @include my();
 
 // margin-left / margin-right with breakpoints
-@for $i from 0 through 24 {
+@for $i from 0 through 50 {
   @include mx-breakpoints($i);
 }
 
 // margin-top / margin-bottom with breakpoints
-@for $i from 0 through 24 {
+@for $i from 0 through 50 {
   @include my-breakpoints($i);
 }
 

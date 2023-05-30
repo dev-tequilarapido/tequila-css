@@ -7,7 +7,7 @@ $padding : (
 
 // padding : padding-left: 10px;
 @each $words, $abbr in $padding {
-  @for $i from 0 through 24 {
+  @for $i from 0 through 50 {
     .p#{$abbr}-#{$i}, div[class^=col-].p#{$abbr}-#{$i} {
       padding-#{$words}: calc(#{$margin} * #{$i});
     }
@@ -16,7 +16,7 @@ $padding : (
 
 // padding breakpoints
 @each $words, $abbr in $padding {
-  @for $i from 0 through 24 {
+  @for $i from 0 through 50 {
     @include padding-breakpoints($words, $abbr, $i);
   }
 }
@@ -28,12 +28,12 @@ $padding : (
 @include py();
 
 // padding-left / padding-right with breakpoints
-@for $i from 0 through 24 {
+@for $i from 0 through 50 {
   @include px-breakpoints($i);
 }
 
 // padding-top / padding-bottom with breakpoints
-@for $i from 0 through 24 {
+@for $i from 0 through 50 {
   @include py-breakpoints($i);
 }
 
@@ -41,6 +41,6 @@ $padding : (
 @include pxy();
 
 // padding top/right/bottom/left with breakpoints
-@for $i from 0 through 24 {
+@for $i from 0 through 50 {
   @include pxy-breakpoints($i);
 }
