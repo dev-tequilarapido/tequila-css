@@ -42,16 +42,3 @@ ul {
     list-style: none;
   }
 }
-
-
-p,
-a,
-li,
-h1,
-h2,
-h3,
-h4 {
-  // Help prevent overflow of long words/names/URLs
-  overflow-wrap: break-word;
-  text-decoration-skip-ink: auto;
-}
