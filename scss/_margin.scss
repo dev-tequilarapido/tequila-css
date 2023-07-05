@@ -19,7 +19,7 @@ $margins : (
 @each $words, $abbr in $margins {
   @for $i from 0 through 50 {
     .m#{$abbr}-#{$i}, div[class^=col-].m#{$abbr}-#{$i} {
-      margin-#{$words}: calc(#{$margin} * #{$i});
+      margin-#{$words}: calc(#{$multiple} * #{$i});
     }
   }
 }
@@ -32,7 +32,7 @@ $margins : (
 }
 
 // each margin direction auto. ex: margin-top: auto;
-@each $words, $abbr in margins {
+@each $words, $abbr in $margins {
   @include margin-auto($words, $abbr)
 }
 

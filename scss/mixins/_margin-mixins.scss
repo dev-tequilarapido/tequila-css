@@ -2,7 +2,7 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .m#{$abbr}-#{$key}-#{$i}, div[class^="col-"].m#{$abbr}-#{$key}-#{$i} {
-                margin-#{$words}: calc(#{$margin} * #{$i});
+                margin-#{$words}: calc(#{$multiple} * #{$i});
             }
         }
     }
@@ -11,8 +11,8 @@
 @mixin mx() {
     @for $i from 0 through 24 {
         .mx-#{$i}, div[class^=col-].mx-#{$i} {
-            margin-left: calc(#{$margin} * #{$i});
-            margin-right: calc(#{$margin} * #{$i});
+            margin-left: calc(#{$multiple} * #{$i});
+            margin-right: calc(#{$multiple} * #{$i});
         }
     }
 }
@@ -21,8 +21,8 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .mx-#{$key}-#{$i} {
-                margin-left: calc(#{$margin} * #{$i});
-                margin-right: calc(#{$margin} * #{$i});
+                margin-left: calc(#{$multiple} * #{$i});
+                margin-right: calc(#{$multiple} * #{$i});
             }
         }
     }
@@ -31,8 +31,8 @@
 @mixin my() {
     @for $i from 0 through 24 {
         .my-#{$i}, div[class^=col-].my-#{$i} {
-            margin-bottom: calc(#{$margin} * #{$i});
-            margin-top: calc(#{$margin} * #{$i});
+            margin-bottom: calc(#{$multiple} * #{$i});
+            margin-top: calc(#{$multiple} * #{$i});
         }
     }
 }
@@ -41,8 +41,8 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .my-#{$key}-#{$i} {
-                margin-bottom: calc(#{$margin} * #{$i});
-                margin-top: calc(#{$margin} * #{$i});
+                margin-bottom: calc(#{$multiple} * #{$i});
+                margin-top: calc(#{$multiple} * #{$i});
             }
         }
     }

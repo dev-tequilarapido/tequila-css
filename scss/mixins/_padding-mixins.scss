@@ -2,7 +2,7 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .p#{$abbr}-#{$key}-#{$i}, div[class^="col-"].p#{$abbr}-#{$key}-#{$i} {
-                padding-#{$words}: calc(#{$margin} * #{$i});
+                padding-#{$words}: calc(#{$multiple} * #{$i});
             }
         }
     }
@@ -11,8 +11,8 @@
 @mixin px() {
     @for $i from 0 through 24 {
         .px-#{$i}, div[class^=col-].px-#{$i} {
-            padding-left: calc(#{$margin} * #{$i});
-            padding-right: calc(#{$margin} * #{$i});
+            padding-left: calc(#{$multiple} * #{$i});
+            padding-right: calc(#{$multiple} * #{$i});
         }
     }
 }
@@ -21,8 +21,8 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .px-#{$key}-#{$i} {
-                padding-left: calc(#{$margin} * #{$i});
-                padding-right: calc(#{$margin} * #{$i});
+                padding-left: calc(#{$multiple} * #{$i});
+                padding-right: calc(#{$multiple} * #{$i});
             }
         }
     }
@@ -31,8 +31,8 @@
 @mixin py() {
     @for $i from 0 through 24 {
         .py-#{$i}, div[class^=col-].my-#{$i} {
-            padding-bottom: calc(#{$margin} * #{$i});
-            padding-top: calc(#{$margin} * #{$i});
+            padding-bottom: calc(#{$multiple} * #{$i});
+            padding-top: calc(#{$multiple} * #{$i});
         }
     }
 }
@@ -41,8 +41,8 @@
     @each $key, $val in $breaks {
         @include teq-breakpoint($val) {
             .py-#{$key}-#{$i} {
-                padding-bottom: calc(#{$margin} * #{$i});
-                padding-top: calc(#{$margin} * #{$i});
+                padding-bottom: calc(#{$multiple} * #{$i});
+                padding-top: calc(#{$multiple} * #{$i});
             }
         }
     }

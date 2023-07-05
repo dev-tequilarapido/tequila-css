@@ -9,7 +9,7 @@ $padding : (
 @each $words, $abbr in $padding {
   @for $i from 0 through 50 {
     .p#{$abbr}-#{$i}, div[class^=col-].p#{$abbr}-#{$i} {
-      padding-#{$words}: calc(#{$margin} * #{$i});
+      padding-#{$words}: calc(#{$multiple} * #{$i});
     }
   }
 }
