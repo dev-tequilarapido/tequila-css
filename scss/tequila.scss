@@ -1,7 +1,6 @@
 @import "./mixins/align-mixins";
 @import "./mixins/breakpoint-mixins";
 @import "./mixins/btn-mixins";
-@import "./mixins/col-mixins";
 @import "./mixins/gap-mixins";
 @import "./mixins/grid-mixins";
 @import "./mixins/justify-mixins";
@@ -13,18 +12,14 @@
 
 
 @import "./global";
-@import "./structure";
 @import "./align";
 @import "./border";
 @import "./text";
 @import "./_button";
 @import "./display";
-@import "./container";
 @import "./direction";
-@import "./col";
 @import "./max-width";
 @import "./position";
-@import "./row";
 @import "./justify";
 @import "./gap";
 @import "./grid";
