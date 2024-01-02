@@ -1,8 +1,8 @@
 {
   "name": "tequila-css",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "description": "A custom CSS library",
-  "main": "./js/index.js",
+  "main": "./scss/tequila.scss",
   "type": "module",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js"
